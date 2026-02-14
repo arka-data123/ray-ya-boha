@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #CCFF00;
+  --deep-black: #0A0A0A;
+  --dark-gray: #1A1A1A;
+}
+
+body {
+  background-color: var(--deep-black);
+  color: white;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--neon-green);
+  color: var(--deep-black);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-gray);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* Anti-gravity floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Utility classes */
+.text-neon {
+  color: var(--neon-green);
+}
+
+.bg-neon {
+  background-color: var(--neon-green);
+}
+
+.border-neon {
+  border-color: var(--neon-green);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+}
+
+.glow-green-strong {
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.6);
+}
